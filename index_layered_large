@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SWRP Galaxy Map</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="docs/images/favicon.ico"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background-color: black;
+      }
+      #map {
+        width: 1920px;
+        height: 960px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" style="float: top;"></div>
+
+    <script>
+      var bounds = [[0, 0],[3333.33, 3333.33]];
+
+      var bg = L.imageOverlay("5400 x 5400/The Galaxy Map BG 5400px.png", bounds);
+      var br = L.imageOverlay("5400 x 5400/The Galaxy Map BR 5400px.png", bounds);
+      var hl = L.imageOverlay("5400 x 5400/The Galaxy Map HL 5400px.png", bounds);
+      var p1 = L.imageOverlay("5400 x 5400/The Galaxy Map P1 5400px.png", bounds);
+      var p2 = L.imageOverlay("5400 x 5400/The Galaxy Map P2 5400px.png", bounds);
+
+	  var map = L.map("map", {
+        crs: L.CRS.Simple,
+        minZoom: -3,
+        maxZoom: 2,
+		layers: [bg,br]
+      });
+
+      var baseMaps = {
+        "Background": bg
+      };
+
+      var overlayMaps = {
+        "Faction_Borders": br,
+        "Hyperlanes": hl,
+        "Planets_1": p1,
+        "planets_2": p2
+      };
+
+      L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+      map.fitBounds(bounds);
+
+      map.setZoom(1);
+    </script>
+  </body>
+</html>
