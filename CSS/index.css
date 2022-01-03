@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap");
+
+body {
+    background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+    display: flex;
+    height: 100vh;
+    font-family: "Oxanium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #f5d546;
+    padding: 0 5px 3px 5px;
+    color: #111111;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 20px 0 10px;
+    border: 1px #f5d546 solid;
+    border-radius: 5px;
+}
+
+h1,
+p,
+#shot .title::before {
+    font-weight: 500;
+}
+
+p,
+#shot .title::before {
+    opacity: 0.3;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #f5d546;
+}
+
+a:hover {
+    background: #f5d546;
+    color: #111;
+    text-decoration: none;
+}
+
+#shot {
+    width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+#shot .card {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background: linear-gradient(0deg,
+            rgba(245, 213, 70, 0.1) 0%,
+            rgba(17, 17, 17, 0) 100%);
+    border: 1px #f5d546 solid;
+    border-radius: 5px;
+    -webkit-animation: entrance 400ms 800ms linear backwards 1;
+    animation: entrance 400ms 800ms linear backwards 1;
+}
+
+#shot .card #component {
+    margin: auto;
+}
+
+#shot .description {
+    -webkit-animation: entrance 400ms 1000ms linear backwards 1;
+    animation: entrance 400ms 1000ms linear backwards 1;
+}
+
+#shot .title {
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    background: #f5d546;
+    -webkit-animation: entrance 400ms 1200ms linear backwards 1;
+    animation: entrance 400ms 1200ms linear backwards 1;
+}
+
+#shot .title::before {
+    content: "Server:VEhFIE1BU1RPRE9O | Version:T3BlcmF0aW9uIFN0b25lQWdl";
+    text-transform: none;
+    text-align: right;
+    position: absolute;
+    left: -120px;
+    top: 110px;
+    transform-origin: 100% 100%;
+    transform: rotateZ(-90deg);
+    width: 150px;
+}
+
+#shot .options {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    right: -220px;
+    -webkit-animation: entrance 400ms 1400ms linear backwards 1;
+    animation: entrance 400ms 1400ms linear backwards 1;
+}
+
+#shot .options button {
+    height: 40px;
+    padding: 0 10px;
+    margin: 0 10px 15px 0;
+    border: 2px #111 solid;
+    outline: 1px #f5d546 solid;
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    transition: 300ms all ease-out;
+}
+
+#shot .options button:hover,
+#shot .options button:focus,
+#shot .options button.active {
+    background-color: rgba(245, 213, 70, 0.5);
+}
+
+#shot .options button.active {
+    border: 2px #f5d546 solid;
+    background-color: #f5d546;
+    color: #111111;
+}
+
+@-webkit-keyframes entrance {
+
+    to,
+    20%,
+    40%,
+    60%,
+    80% {
+        opacity: 0.3;
+    }
+
+    from,
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 0;
+    }
+}
+
+#component div {
+    display: none;
+    -webkit-animation: entrance 400ms 0ms linear backwards 1;
+    animation: entrance 400ms 0ms linear backwards 1;
+}
+
+#component.GALAXY-MAP div:nth-of-type(1),
+#component.INFOGRAPHICS div:nth-of-type(2),
+#component.SUBREDDITS div:nth-of-type(3),
+#component.DISCORD div:nth-of-type(4) {
+    display: block;
+}
+
+#component {
+    display: grid;
+    justify-items: center;
+}
+
+half-opacity {
+    opacity: 0.5;
+    -webkit-animation: entrance 400ms 200ms linear backwards 1;
+    animation: entrance 400ms 200ms linear backwards 1;
+}
+
+code-data {
+    -webkit-animation: entrance 400ms 400ms linear backwards 1;
+    animation: entrance 400ms 400ms linear backwards 1;
+}
+
+code-empty {
+    -webkit-animation: entrance 400ms 2000ms linear backwards 1;
+    animation: entrance 400ms 2000ms linear backwards 1;
+}
+
+@element "#component.TEST-04"and (:empty) {
+    :self:before {
+        content: "This is empty";
+        -webkit-animation: entrance 400ms 200ms linear backwards 1;
+        animation: entrance 400ms 200ms linear backwards 1;
+    }
+}
