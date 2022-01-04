@@ -26,9 +26,11 @@ var p2 = L.imageOverlay(
 
 var map = L.map("map", {
     crs: L.CRS.Simple,
-    minZoom: -3,
+    minZoom: -2,
     maxZoom: 2,
-    layers: [bg, br, hl, p1, p2]
+    layers: [bg, br, hl, p1, p2],
+    preferCanvas: true,
+    center: [1600,1692],
 });
 
 var baseMaps = {
@@ -45,5 +47,15 @@ var overlayMaps = {
 L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 map.fitBounds(bounds);
+map.setZoom(-1);
 
-map.setZoom(1);
+//////
+function mapCoords() {
+    map.on('click', function(e){
+      var coord = e.latlng;
+      var lat = coord.lat;
+      var lng = coord.lng;
+      console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
+      });
+  }
+mapCoords();
