@@ -88,7 +88,7 @@ a:hover {
 }
 
 #shot .title::before {
-    content: "Server:VEhFIE1BU1RPRE9O | Version:T3BlcmF0aW9uIFN0b25lQWdl";
+    content: "Server:Iperos_Rig_0006 | Version:FlexWare_03.1.243";
     text-transform: none;
     text-align: right;
     position: absolute;
@@ -164,7 +164,7 @@ a:hover {
 }
 
 #component.GALAXY-MAP div:nth-of-type(1),
-#component.INFOGRAPHICS div:nth-of-type(2),
+#component.REGION-12-LORE div:nth-of-type(2),
 #component.SUBREDDITS div:nth-of-type(3),
 #component.DISCORD div:nth-of-type(4) {
     display: block;

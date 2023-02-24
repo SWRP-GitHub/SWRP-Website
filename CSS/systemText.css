@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap");
+
+@-webkit-keyframes entrance {
+
+    to,
+    20%,
+    40%,
+    60%,
+    80% {
+        opacity: 0.3;
+    }
+
+    from,
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 0;
+    }
+}
+
+code-data {
+    -webkit-animation: entrance 400ms 400ms linear backwards 1;
+    animation: entrance 400ms 400ms linear backwards 1;
+}
+
+
+
+
+
+body {
+    font-family: "Oxanium", sans-serif;
+    background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+    background-color: black;
+    border-style: outset;
+    border-color: rgb(0, 119, 255);
+    border-width: thick;
+    border-radius: 5px;
+}
+
+div {
+    background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-style: inset;
+    border-color: grey;
+    border-width: thin;
+    background-color: #1e1e1e;
+}
+
+h1 {
+    color: rgb(0, 119, 255);
+    text-decoration: underline;
+    /* text-shadow: 0.35px 0.35px rgb(255, 255, 255); */
+    */
+}
+
+h2 {
+    color: rgb(0, 119, 255);
+    /* text-shadow: 0.35px 0.35px #a2f1f7; */
+}
+
+h3 {
+    color: rgb(0, 119, 255);
+    /* text-shadow: 0.35px 0.35px #a2f1f7; */
+}
+
+p1 {
+    color: white;
+    /* text-shadow: 0.35px 0.35px #a2f1f7; */
+}
+
+p2 {
+    color: rgb(0, 119, 255);
+    text-decoration: underline;
+}
+
+i {
+    color: rgb(0, 119, 255);
+}
+
+.collapsible {
+    background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 3px solid;
+    border-color: #464545;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background: #a3a2a2 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+}
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+.active:after {
+    content: "\2212";
+  }
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.2s ease-out;
+    background: #1e1e1e url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC) repeat;
+}
